@@ -38,7 +38,7 @@ public class GameOverHandler : MonoBehaviour{
     }
 
     public void ContinueButton(){
-        // AdManager.Instance.ShowAd(this);
+        AdManager.Instance.ShowAd(this);
         continueButton.interactable = false;
     }
 

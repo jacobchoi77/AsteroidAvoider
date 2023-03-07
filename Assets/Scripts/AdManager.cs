@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
@@ -33,6 +32,10 @@ public class AdManager : MonoBehaviour, IUnityAdsInitializationListener, IUnityA
     }
 
     private void Start(){
+        if (Advertisement.isSupported){
+            Debug.Log(Application.platform + " supported by Advertisement");
+        }
+
         Advertisement.Initialize(_gameId, testMode, this);
     }
 

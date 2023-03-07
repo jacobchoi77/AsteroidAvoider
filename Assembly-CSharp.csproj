@@ -44,19 +44,23 @@
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
      <Compile Include="Assets\Scripts\GameOverHandler.cs" />
+     <Compile Include="Assets\Scripts\AdManager.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\ScoreSystem.cs" />
      <Compile Include="Assets\Scripts\Asteroid.cs" />
-     <Compile Include="Assets\Scripts\AdManager.cs" />
+     <Compile Include="Assets\Samples\Advertisement\4.3.0\UnityAds Example App\Scripts\UnityAdsManager.cs" />
+     <Compile Include="Assets\Samples\Advertisement\4.3.0\UnityAds Example App\Scripts\UnityAdsExampleUI.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <Folder Include="Assets\Samples\Advertisement\4.3.0\UnityAds Example App\Sprites" />
      <Folder Include="Assets\Settings" />
      <Folder Include="Assets\StarSparrow\Prefabs\Examples" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <Folder Include="Assets\StarSparrow\Meshes" />
+     <Folder Include="Assets\Samples" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\StarSparrow\Textures" />
      <Folder Include="Assets\StarSparrow\Prefabs\Modular Examples" />
@@ -65,6 +69,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
+     <Folder Include="Assets\Samples\Advertisement\4.3.0\UnityAds Example App\Scripts" />
      <Folder Include="Assets\StarSparrow\Prefabs\BonusContent" />
      <Folder Include="Assets\StarSparrow\Prefabs\BonusContent\PolygonSpaceship" />
      <Folder Include="Assets\StarSparrow\Textures\BonusContent" />
@@ -84,18 +89,22 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <Folder Include="Assets\TextMesh Pro\Shaders" />
+     <Folder Include="Assets\Samples\Advertisement\4.3.0" />
      <Folder Include="Assets\StarSparrow\Prefabs" />
+     <Folder Include="Assets\Samples\Advertisement\4.3.0\UnityAds Example App" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\StarSparrow\Textures\BonusContent\Mines" />
      <Folder Include="Assets\StarSparrow\Prefabs\Modules" />
      <Folder Include="Assets\StarSparrow\Textures\Masks" />
+     <Folder Include="Assets\Samples\Advertisement" />
      <Folder Include="Assets\StarSparrow\Materials" />
      <Folder Include="Assets\StarSparrow\Textures\BonusContent\Asteroids" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets\StarSparrow\Materials\Extra" />
+     <Folder Include="Assets\Samples\Advertisement\4.3.0\UnityAds Example App\Prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <Folder Include="Assets\StarSparrow\Textures\BonusContent\MissileBomb" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
@@ -104,6 +113,7 @@
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets\Samples\Advertisement\4.3.0\UnityAds Example App\Scenes" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Folder Include="Assets\StarSparrow\Materials\BonusContent" />
@@ -344,6 +354,9 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+     <HintPath>C:\unity\udemy\unity c# mobile\Asteroid Avoider\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
      <HintPath>C:\unity\udemy\unity c# mobile\Asteroid Avoider\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
@@ -358,9 +371,6 @@
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
      <HintPath>C:\unity\udemy\unity c# mobile\Asteroid Avoider\Library\PackageCache\com.unity.burst@1.8.2\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>C:\unity\udemy\unity c# mobile\Asteroid Avoider\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.17f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
