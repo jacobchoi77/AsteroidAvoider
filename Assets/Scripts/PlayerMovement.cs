@@ -12,12 +12,12 @@ public class PlayerMovement : MonoBehaviour{
     private float rotationSpeed = 5;
 
     private Camera mainCamera;
-    private Rigidbody _rigidbody;
-    private Vector3 _movementDirection;
+    private Rigidbody body;
+    private Vector3 movementDirection;
 
 
     private void Start(){
-        _rigidbody = GetComponent<Rigidbody>();
+        body = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
     }
 
@@ -28,24 +28,24 @@ public class PlayerMovement : MonoBehaviour{
     }
 
     private void FixedUpdate(){
-        if (_movementDirection == Vector3.zero){
+        if (movementDirection == Vector3.zero){
             return;
         }
 
-        _rigidbody.AddForce(_movementDirection * (forceMagnitude * Time.deltaTime), ForceMode.Force);
-        _rigidbody.velocity = Vector3.ClampMagnitude(_rigidbody.velocity, maxVelocity);
+        body.AddForce(movementDirection * (forceMagnitude * Time.deltaTime), ForceMode.Force);
+        body.velocity = Vector3.ClampMagnitude(body.velocity, maxVelocity);
     }
 
     private void ProcessInput(){
         if (Touchscreen.current.primaryTouch.press.isPressed){
             var touchPosition = Touchscreen.current.primaryTouch.position.ReadValue();
             var worldPosition = mainCamera.ScreenToWorldPoint(touchPosition);
-            _movementDirection = transform.position - worldPosition;
-            _movementDirection.z = 0f;
-            _movementDirection.Normalize();
+            movementDirection = transform.position - worldPosition;
+            movementDirection.z = 0f;
+            movementDirection.Normalize();
         }
         else{
-            _movementDirection = Vector3.zero;
+            movementDirection = Vector3.zero;
         }
     }
 
@@ -68,11 +68,11 @@ public class PlayerMovement : MonoBehaviour{
     }
 
     private void RotateToFaceVelocity(){
-        if (_rigidbody.velocity == Vector3.zero){
+        if (body.velocity == Vector3.zero){
             return;
         }
 
-        var targetRotation = Quaternion.LookRotation(_rigidbody.velocity, Vector3.back);
+        var targetRotation = Quaternion.LookRotation(body.velocity, Vector3.back);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 }
