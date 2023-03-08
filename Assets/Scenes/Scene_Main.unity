@@ -1047,7 +1047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1768037038}
   scoreMultiplier: 5
-  _score: 0
+  score: 0
 --- !u!4 &1411698331
 Transform:
   m_ObjectHideFlags: 0

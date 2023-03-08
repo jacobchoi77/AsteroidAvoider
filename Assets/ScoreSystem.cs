@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ScoreSystem : MonoBehaviour{
     [SerializeField]
@@ -8,22 +9,23 @@ public class ScoreSystem : MonoBehaviour{
     [SerializeField]
     private float scoreMultiplier = 5;
 
-    public float _score;
-    private bool _shouldCount = true;
+    [FormerlySerializedAs("_score")]
+    public float score;
+    private bool shouldCount = true;
 
     private void Update(){
-        if (!_shouldCount) return;
-        _score += Time.deltaTime * scoreMultiplier;
-        scoreText.text = Mathf.FloorToInt(_score).ToString();
+        if (!shouldCount) return;
+        score += Time.deltaTime * scoreMultiplier;
+        scoreText.text = Mathf.FloorToInt(score).ToString();
     }
 
     public int EndTimer(){
-        _shouldCount = false;
+        shouldCount = false;
         scoreText.text = string.Empty;
-        return Mathf.FloorToInt(_score);
+        return Mathf.FloorToInt(score);
     }
 
     public void StartTimer(){
-        _shouldCount = true;
+        shouldCount = true;
     }
 }
