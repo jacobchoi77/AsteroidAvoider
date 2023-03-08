@@ -9,7 +9,6 @@ public class ScoreSystem : MonoBehaviour{
     [SerializeField]
     private float scoreMultiplier = 5;
 
-    [FormerlySerializedAs("_score")]
     public float score;
     private bool shouldCount = true;
 
